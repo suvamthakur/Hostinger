@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2a44d3191c.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Public Sans', sans-serif;
+        }
+        html {
+            font-size: 16px;
+            text-align: center;
+        }
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            color: #1d1e20;
+            z-index: 1;
+        }
+        .logo-container {
+            width: 180px;
+        }
+        .logo {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Main container */
+        .main {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 0 4%;
+        }
+        /* Upper */
+        .login {
+            font-size: 1.6rem;
+            color: #2f1c6a;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon span {
+            display: none;
+        }
+        .icon {
+            height: 50px;
+            background-color: #3D6AD6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            margin: 25px 10px;
+            padding: 10px 24px;
+            cursor: pointer;
+        }
+        .google-icon {
+            background-color: white;
+        }
+        img {
+            height: 85%;
+            object-fit: cover;
+        }
+        .fb {
+            border-radius: 50%;
+            background-color: white;
+            border-top: 1px solid white;
+        }        
+        .line span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #979797;
+            gap: 15px;
+        }
+        .line span::before {
+            display: inline-block;
+            content: " ";
+            width: 100%;
+            border-top: 1px solid #ccc;
+            border-top-width: 1px;
+        }
+        .line span::after {
+            display: inline-block;
+            content: " ";
+            width: 100%;
+            border-top: 1px solid #ccc;
+            border-top-width: 1px;
+        }
+        /* Form section*/
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-box {
+            margin: 15px 0;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 1rem;
+            padding: 15px;
+        }
+        .input-box:focus {      /* After clicking the input-boxes */
+            outline: 1px solid #6747C7;
+            box-shadow: 0 0 4px 1px #6747C7;
+        }
+        .login-btn {
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 16px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #6747C7;
+            color: white;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+        }
+        .login-btn:hover {
+            background-color: #563ba8;
+        }
+        .forgot-pass {
+            color: #6747C7;
+            font-weight: 700;
+            margin: 15px;
+            cursor: pointer;
+        }
+        .forgot-pass:hover {
+            color: #5136a3;
+        }
+        /* Lower section */
+        .membership-text {
+            color: #2f1c6a;
+            font-weight: 700;
+            line-height: 25px;
+            margin: 25px 0;
+        }
+        .membership-text a {
+            text-decoration: none;
+            color: #6747C7;
+        }
+        .membership-text a:hover {
+            color: #5136a3;
+        }
+
+        /* Media queries */
+        @media (max-width: 600px) {
+            .main {
+                padding: 4%;
+            }
+            .logo-container {
+                width: 160px;
+            }
+            .login {
+                margin-bottom: 15px;
+            }
+            .icon-container {
+                flex-direction: column;
+            }
+            .icon {
+                width: 100%;
+                margin: 8px 0;
+                gap: 10px;
+            }
+            .icon span {
+                display: block;
+                font-weight: 600;
+                color: white;
+            }
+            .google-icon span {
+                color: black;
+            }
+            .line {
+                margin: 10px 0;
+            }
+        }
+        </style>
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="images/logo.jpg" alt="">
+        </div>
+    </nav>
+    <div class="main">
+        <div class="upper">
+            <h2 class="login">Log in</h2>
+            <div class="icon-container">
+                <div class="icon google-icon">
+                    <img class="google" src="/images/google.png" alt="" srcset="">
+                    <span>Google</span>
+                </div>
+                <div class="icon">
+                    <img class="fb" src="/images/facebook.png" alt="" srcset="">
+                    <span>Facebook</span>
+                </div>
+            </div>
+            <div class="line">
+                <span>or</span>
+            </div>
+        </div>
+        <form action="">
+            <input class="input-box" type="email" name="" id="" placeholder="Email" required>
+            <input class="input-box" type="password" name="" id="" placeholder="Password" required>
+            <button class="login-btn">Log in</button>
+        </form>
+        <p class="forgot-pass">Forgot password?</p>
+        <div class="lower">
+            <p class="membership-text">
+                Not a member yet? <a href="index.html">Choose a hosting plan</a> and get started now!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
